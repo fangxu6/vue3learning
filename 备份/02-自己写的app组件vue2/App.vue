@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <Person />
-
+    <h1>你好啊!</h1>
+    <person></person>
   </div>
   <!-- html content -->
 </template>

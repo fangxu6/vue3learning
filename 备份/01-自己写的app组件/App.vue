@@ -1,19 +1,14 @@
 <template>
   <div class="app">
-    <Person />
-
+    <h1>你好啊!</h1>
   </div>
   <!-- html content -->
 </template>
 
 <script lnang="ts">
-import Person from './components/Person.vue';
 // JS或TS
 export default {
-  name: 'App', // 组件名称
-  components: {
-    Person // 注册组件
-  },
+  name: 'App' // 组件名称
 }
 </script>
 

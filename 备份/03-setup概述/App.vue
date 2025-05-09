@@ -1,7 +1,6 @@
 <template>
   <div class="app">
-    <Person />
-
+    <person></person>
   </div>
   <!-- html content -->
 </template>
