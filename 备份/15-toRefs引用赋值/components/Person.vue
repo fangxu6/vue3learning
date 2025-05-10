@@ -1,6 +1,12 @@
 <template>
   <div class="person">
-    ???
+<h2>个人信息</h2>
+    <ul>
+      <li>姓名: {{ name}},{{person.name }}</li>
+      <li>年龄: {{ age }}</li>
+    </ul>
+    <button @click="changeName">修改姓名</button>
+    <button @click="changeAge">修改年龄</button>
   </div>
 </template>
 
@@ -15,18 +21,31 @@ export default {
 /**
  * 组件名: Person
  */
-  // import {teype PersonInterface} from '@/types/index'
-  import  {type PersonInterface } from '../types'
+ import { reactive,toRefs } from "vue"
 
-  let person: PersonInterface = {
-    id:'asyu1',
-    name: '张三',
-    age: 18
-  }
+// 数据
+let person = reactive({
+  name: '张三',
+  age: 18
+})
+
+let {
+  name,
+  age
+} = toRefs(person) //引用赋值
+
+
+//方法
+function changeName() {
+  person.name = person.name+'~'
+}
+function changeAge() {
+  person.age = person.age + 1
+}
+
 
 </script>
 
-// scoped局部样式，默认都加
 <style scoped>
 .person {
   background-color: skyblue;

@@ -1,18 +1,20 @@
 <template>
-  <!-- html content 把对应元素拼合到一起-->
   <div class="app">
-
-
+    <Person />
 
   </div>
   <!-- html content -->
 </template>
 
-//改为Vue3
-<script lnang="ts" setup name ="App" >
-import Person from './components/Person.vue'
-
-
+<script lnang="ts">
+import Person from './components/Person.vue';
+// JS或TS
+export default {
+  name: 'App', // 组件名称
+  components: {
+    Person // 注册组件
+  },
+}
 </script>
 
 <style>
