@@ -3,9 +3,7 @@
     <!-- 导航区 -->
     <ul>
       <li v-for="news in newslist" :key="news.id">
-        <!-- 第一种写法 -->
-        <RouterLink to="/news/detail">{{ news.title }}
-        </RouterLink>
+        <RouterLink to="/news/detail">{{ news.title }}</RouterLink>
       </li>"
     </ul>
     <!-- 展示区 -->

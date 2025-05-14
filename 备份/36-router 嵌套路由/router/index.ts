@@ -27,7 +27,6 @@ const router = createRouter({
       component: News,
       children: [
         {
-          name: 'xinwenDetail',
           path: 'detail',
           component: Detail,
           // 传递参数
