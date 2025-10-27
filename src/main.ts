@@ -1,15 +1,7 @@
+// 引入createApp用于创建Vue应用实例
 import { createApp } from 'vue'
+// 引入App组件作为根组件
 import App from './App.vue'
 
-// 引入pinia
-import { createPinia } from 'pinia'
-
-const app = createApp(App)
-
-//创建pinia实例，在App创建之后(建议)
-const pinia = createPinia()
-// 第三步：安装pinia
-app.use(pinia)
-
-// 挂载整个应用到app容器中
-app.mount('#app')
+// app和index.html中的id要一致
+createApp(App).mount('#app')

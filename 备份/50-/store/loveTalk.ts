@@ -7,7 +7,7 @@ export const useTalkStore = defineStore('talk', {
 actions:{
   async getATalk(){
   //发请求
-  let { data: { content } } = await axios.get('https://api.uomg.com/api/rand.qinghua?format=json');
+  let { data: { content } } = await axios.get('http://api.uomg.com/api/rand.qinghua?format=json');
   //返回一个对象
   console.log('获取到的内容', content)
   let obj = { id: nanoid(), content }
